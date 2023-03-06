@@ -17,24 +17,25 @@ model Professor{
   email String @unique
   cpf String @unique
 
-  materias Materia[]
+  materias Cadeira[]
 
   @@map("professores")
 }
 
-model Materia{
+model Cadeira{
   id String @id @default(uuid())
   nome String
-  //slug
-  dt_inicio DateTime
-  dt_fim DateTime
+  slug String
+  dt_inicio DateTime?
+  dt_fim DateTime?
   carga_horaria Int
 
   professor Professor @relation(fields: [id_professor],references: [id])
   id_professor String
 
+  cadeiras_abertas Cadeira_aberta[]
 
-  @@map("materias")
+  @@map("cadeiras")
 }
 
 model Aluno{
@@ -43,8 +44,22 @@ model Aluno{
   telefone String @db.VarChar(11)
   email String @unique 
   cpf String @unique @db.VarChar(11)
-  //matricula String @unique @default(cuid())
+  matricula String @unique
 
+  cadeiras_abertas Cadeira_aberta[]
 
   @@map("alunos")
+}
+
+
+model Cadeira_aberta{
+  id String @id @default(uuid())
+
+  cadeira Cadeira @relation(fields: [id_cadeira], references: [id])
+  id_cadeira String
+
+  aluno Aluno @relation(fields: [id_aluno], references: [id])
+  id_aluno String
+
+  @@map("cadeiras_abertas")
 }
