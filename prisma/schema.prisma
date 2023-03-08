@@ -14,7 +14,7 @@ model Professor{
   id String @id @default(uuid())
   nome String
   telefone String
-  email String @unique
+  email String
   cpf String @unique
 
   materias Cadeira[]
@@ -42,7 +42,7 @@ model Aluno{
   id String @id @default(uuid())
   nome String
   telefone String @db.VarChar(11)
-  email String @unique 
+  email String
   cpf String @unique @db.VarChar(11)
   matricula String @unique
 
