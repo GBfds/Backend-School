@@ -4,8 +4,11 @@ import { CreateCadeiraService } from "../../services/cadeira/CreateCadeiraServic
 class CreateCadeiraController{
     async hundle(req: Request, res: Response){
         const {nome, dt_inicio, dt_fim, carga_horaria} = req.body
-        const slug = "exemplo1"
         const id_professor = req.user_id
+
+        const splitID = id_professor.split("-",1)
+        const slug = [`${nome}_${splitID}`].join()
+
         const createCadeiraService = new CreateCadeiraService();
 
         const newCadeira = await createCadeiraService.execute({

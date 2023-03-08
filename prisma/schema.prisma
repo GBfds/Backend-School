@@ -17,7 +17,7 @@ model Professor{
   email String
   cpf String @unique
 
-  materias Cadeira[]
+  cadeiras Cadeira[]
 
   @@map("professores")
 }
@@ -34,6 +34,7 @@ model Cadeira{
   id_professor String
 
   cadeiras_abertas Cadeira_aberta[]
+  cadeiras_pendentes Cadeira_pendente[]
 
   @@map("cadeiras")
 }
@@ -47,6 +48,8 @@ model Aluno{
   matricula String @unique
 
   cadeiras_abertas Cadeira_aberta[]
+
+  cadeiras_pendentes Cadeira_pendente[]
 
   @@map("alunos")
 }
@@ -62,4 +65,18 @@ model Cadeira_aberta{
   id_aluno String
 
   @@map("cadeiras_abertas")
+}
+
+model Cadeira_pendente{
+  id String @id @default(uuid())
+
+  aluno Aluno @relation(fields: [id_aluno], references: [id])
+  id_aluno String
+
+  cadeira Cadeira @relation(fields: [id_cadeira], references: [id])
+  id_cadeira String
+
+  confirmacao_prof Boolean @default(false)
+
+  @@map("cadeiras_pendentes")
 }

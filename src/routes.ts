@@ -9,6 +9,7 @@ import { CreateProfController } from "./controllers/professores/CreateProfContro
 import { CreateAlunoController } from "./controllers/aluno/CreateAlunoController";
 
 import { CreateCadeiraController } from "./controllers/cadeira/CreateCadeiraService";
+import { ListCadeirasController } from "./controllers/cadeira/ListCadeirascontroller";
 
 
 const router = Router();
@@ -21,5 +22,6 @@ router.post("/professor", new CreateProfController().hundle)
 router.post("/aluno", new CreateAlunoController().hundle)
 
 router.post("/cadeira",profAuthenticated, new CreateCadeiraController().hundle)
+router.get("/cadeiras", profAuthenticated, new ListCadeirasController().hundle)
 
 export {router}
