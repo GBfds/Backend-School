@@ -13,9 +13,9 @@ datasource db {
 model Professor{
   id String @id @default(uuid())
   nome String
-  telefone String
+  telefone String @db.VarChar(11)
   email String
-  cpf String @unique
+  cpf String @unique @db.VarChar(11)
 
   cadeiras Cadeira[]
 
