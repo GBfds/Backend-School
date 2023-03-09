@@ -4,7 +4,8 @@
 # Tecnologias
 - Node.js
 - Express
-- Typescrip
+- Typescript
+- Postgres
 - Prisma
 - Isonmnia
 
