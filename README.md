@@ -45,14 +45,14 @@
 
 - Criando Professor ou Aluno
 
-´´´
+```
 {
 	"nome": "gabriel professor",
 	"telefone": "92954013", 
 	"email": "prof@gmail.cm",
 	"cpf": "05875840332"
 }
-´´´
+```
 
 ## Login
 
