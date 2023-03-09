@@ -11,6 +11,6 @@
 # Partes concluidas
 
 - __Básico__
---Requisitoas
+ -Requisitoas
 
 - __Intermediário__
