@@ -10,8 +10,8 @@
 
 # Partes concluidas
 
-*  __Básico__
-- Requisitoas
+-  __Básico__
+   - Requisitoas
 
-* __Intermediário__
-- Requisitoas
+- __Intermediário__
+   - Requisitoas
