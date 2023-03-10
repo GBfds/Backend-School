@@ -3,10 +3,10 @@ import { ConfirmarMatriculaService } from "../../services/professor/ConfirmarMat
 
 class ConfirmarMatriculaController{
     async hundle(req: Request, res: Response){
-        const {id_cadeira} = req.body;
+        const {id_pendencia} = req.body;
 
         const confirmarMatricula = new ConfirmarMatriculaService();
-        const confirmacao = await confirmarMatricula.execute({id_cadeira})
+        const confirmacao = await confirmarMatricula.execute({id_pendencia})
 
         return res.json(confirmacao)
     }

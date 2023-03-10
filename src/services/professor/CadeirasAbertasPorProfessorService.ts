@@ -10,7 +10,12 @@ class CadeirasAbertasPorProfessorService{
             where:{
                 id_professor: id_professor
             }, include:{
-                cadeiras_abertas: true
+                cadeiras_abertas: {
+                    select: {
+                        id: true,
+                        aluno: true
+                    }
+                }
             }
         })
 

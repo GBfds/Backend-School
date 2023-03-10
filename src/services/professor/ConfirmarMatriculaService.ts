@@ -1,7 +1,7 @@
 import prismaClient from "../../prisma";
 
 interface ConfirmRequest{
-    id_cadeira: string;
+    id_pendencia: string;
 }
 
 type CadeiraPendente = {
@@ -12,9 +12,9 @@ type CadeiraPendente = {
 }
 
 class ConfirmarMatriculaService{
-    async execute({id_cadeira}:ConfirmRequest){
+    async execute({id_pendencia}:ConfirmRequest){
 
-        const exists = await cadeiraExiste({id_cadeira})
+        const exists = await cadeiraExiste({id_pendencia})
         if (!exists){
             throw new Error("id invalido");
         }
@@ -24,7 +24,7 @@ class ConfirmarMatriculaService{
             data: {
                 confirmacao_prof: confirm
             }, where: {
-                id: id_cadeira
+                id: id_pendencia
             }
         }) as CadeiraPendente
 
@@ -34,10 +34,10 @@ class ConfirmarMatriculaService{
     }
 }
 
-async function cadeiraExiste({id_cadeira}:ConfirmRequest) {
+async function cadeiraExiste({id_pendencia}:ConfirmRequest) {
     const exists = await prismaClient.cadeira_pendente.findFirst({
         where:{
-            id: id_cadeira,
+            id: id_pendencia,
             confirmacao_prof: false
         }
     })

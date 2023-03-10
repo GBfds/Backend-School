@@ -13,6 +13,9 @@ class CadeirasPendentesPorProfessorService{
                 cadeiras_pendentes:{
                     where:{
                         confirmacao_prof: false
+                    }, select:{
+                        id: true,
+                        aluno: true
                     }
                 }
             }
