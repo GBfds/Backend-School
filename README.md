@@ -15,11 +15,11 @@
 -  __Básico__
    - Requisitoas
       - O sistema deve ser capaz de estabelecer uma conexão com um banco de dados Postgres. ✅
-      - O sistema deve ser capaz de lidar com requisições com formato de dados do tipo JSON.
-      - O sistema deve ser capaz de cadastrar professores, alunos e cadeiras(matérias).
-      - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional.
+      - O sistema deve ser capaz de lidar com requisições com formato de dados do tipo JSON. ✅
+      - O sistema deve ser capaz de cadastrar professores, alunos e cadeiras(matérias). ✅
+      - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional. ✅
    - Adicionar arquivo de rotas do Insomnia
-   - Adicionar migrations
+   - Adicionar migrations ✅
    - Adicionar o diagrama do banco de dados
 
 - __Intermediário__
@@ -66,6 +66,37 @@
 ```
 
 2. Ao fazer o login vôce recebera um Json com os dados do usuário e um JWT com nome:  __"token"__, ele será usado nas requisições seguintes
+### OBS: As proximas oções a API sempre recebe o ID do usuário pelo Bearer token
+
+
+
+# Opções de cada usuário
+
+## Opções do Professor
+
+- Cadastrar nova cadeira
+
+- Listar todas as cadeiras criadas
+
+- Listar cadeiras pendentes de confirmação do professor
+
+- Confirmar matricula do aluno
+
+- Listar cadeiras abertas e alunos matriculados
+
+
+## Opções do Aluno
+
+- fazer pedido de matricula
+
+- Listar matriculas pendentes
+
+- Listar matriculas abertas
+
+
+
+
+
 
 
 
