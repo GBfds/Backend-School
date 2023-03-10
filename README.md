@@ -43,7 +43,7 @@
 2. A __matricula__ do aluno é criada automaticamente
 3. As chaves __telefone__ e __cpf__ tem um tamanho máximo de 11 caracteres, elas devem ser inseridas sem qualquer carácter especial
 
-- Criando Professor ou Aluno
+- Criando usuário Professor ou Aluno
 
 ```
 {
@@ -65,33 +65,54 @@
 ```
 
 2. Ao fazer o login vôce recebera um Json com os dados do usuário e um JWT com nome:  __"token"__, ele será usado nas requisições seguintes
-### OBS: As proximas oções a API sempre recebe o ID do usuário pelo Bearer token
+### OBS: As proximas oções a API sempre recebe o ID do usuário pelo Auth type: Bearer token
 
 
 
 # Opções de cada usuário
+__OBS:__ Nas requisições que necessitam do ID do professor ou do aluno não é necessario passa-lo no arquivo JSON, ele já é obtido pelo  __Auth type: Bearer token__
 
 ## Opções do Professor
 
-- Cadastrar nova cadeira
 
-- Listar todas as cadeiras criadas
+- Cadastrar nova cadeira
+```
+{
+	"nome": "matematica",
+	"dt_inicio":"",
+  	"dt_fim": "",
+	"carga_horaria":150
+}
+```
 
 - Listar cadeiras pendentes de confirmação do professor
+	- Necessario apenas a URL
 
 - Confirmar matricula do aluno
+```
+{
+	"id_pendencia": "6d4d6a2a-f245-4d36-8748-fb0d8588a2d3"
+}
+```
 
 - Listar cadeiras abertas e alunos matriculados
+	- Necessario apenas a URL
 
 
 ## Opções do Aluno
 
 - fazer pedido de matricula
+```
+{
+	"id_cadeira": "316b28d3-9b2f-400b-8282-3a814fbc07a5"
+}
+```
 
 - Listar matriculas pendentes
+	- Necessario apenas a URL
 
 - Listar matriculas abertas
-
+	- Necessario apenas a URL
 
 
 
