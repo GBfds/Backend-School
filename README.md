@@ -24,14 +24,14 @@
 
 - __Intermediário__
    - Requisitoas
-      - O professor deve ser capaz de cadastrar uma ou mais cadeiras(matérias).
-      - O aluno deve ser capaz de se matricular em uma ou mais cadeiras(matérias).
-      - O professor deve assentir as solicitações de matrículas dos alunos.
+      - O professor deve ser capaz de cadastrar uma ou mais cadeiras(matérias). ✅
+      - O aluno deve ser capaz de se matricular em uma ou mais cadeiras(matérias). ✅
+      - O professor deve assentir as solicitações de matrículas dos alunos. 
       - Uma cadeira não poderá ser ofertada mais de uma vez por período.
       - Um aluno não pode se matricular em mais de 8 cadeiras(matérias) e menos de 1.
       - O sistema deve ser capaz de listar todas as cadeiras e seus alunos matriculados.
-      - O sistema deve possuir dois módulos "aluno e professor". Dica: pode ser utilizado o JWT.
-      - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional.
+      - O sistema deve possuir dois módulos "aluno e professor". Dica: pode ser utilizado o JWT. ✅
+      - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional. ✅
    - Adicionar testes unitários
 
 
