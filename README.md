@@ -41,8 +41,7 @@
 ## Criando usuarios:
 1. O professor e o aluno são criados com URLs diferentes, mas o arquivo Json é o mesmo
 2. A __matricula__ do aluno é criada automaticamente
-3. As chaves __telefone__ e __cpf__ tem um tamanho máximo de 11 caracteres, elas devem ser inseridas sem outros caracteres
-4. o __cpf__ é uma chave única, e não pode se usada em 2 tabelas ( Um aluno não pode ser professor e vice-versa )
+3. As chaves __telefone__ e __cpf__ tem um tamanho máximo de 11 caracteres, elas devem ser inseridas sem qualquer carácter especial
 
 - Criando Professor ou Aluno
 
