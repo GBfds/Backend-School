@@ -26,10 +26,10 @@
    - Requisitoas
       - O professor deve ser capaz de cadastrar uma ou mais cadeiras(matérias). ✅
       - O aluno deve ser capaz de se matricular em uma ou mais cadeiras(matérias). ✅
-      - O professor deve assentir as solicitações de matrículas dos alunos. 
+      - O professor deve assentir as solicitações de matrículas dos alunos. ✅
       - Uma cadeira não poderá ser ofertada mais de uma vez por período.
       - Um aluno não pode se matricular em mais de 8 cadeiras(matérias) e menos de 1.
-      - O sistema deve ser capaz de listar todas as cadeiras e seus alunos matriculados.
+      - O sistema deve ser capaz de listar todas as cadeiras e seus alunos matriculados. ✅
       - O sistema deve possuir dois módulos "aluno e professor". Dica: pode ser utilizado o JWT. ✅
       - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional. ✅
    - Adicionar testes unitários
@@ -78,10 +78,10 @@
 - Cadastrar nova cadeira
 ```
 {
-	"nome": "matematica",
-	"dt_inicio":"",
-  	"dt_fim": "",
-	"carga_horaria":150
+	"nome" : "matematica2.0",
+	"dt_inicio": "2023-03-10T12:00:00.000Z",
+	"dt_fim": "2023-03-13T12:00:00.000Z",
+	"carga_horaria" : 150
 }
 ```
 
@@ -89,6 +89,8 @@
 	- Necessario apenas a URL
 
 - Confirmar matricula do aluno
+Ao listar as cadeiras pendentes o professor recebera uma lista de objetos e em cada um terá as inforções das cadeiras e um array com nome __cadeiras_pendentes__, dentro dele terá um ID e um objeto com as informações do aluno, esse id é usado para a confirmação da matricula
+
 ```
 {
 	"id_pendencia": "6d4d6a2a-f245-4d36-8748-fb0d8588a2d3"
