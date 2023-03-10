@@ -65,12 +65,12 @@
 ```
 
 2. Ao fazer o login vôce recebera um Json com os dados do usuário e um JWT com nome:  __"token"__, ele será usado nas requisições seguintes
-### OBS: As proximas oções a API sempre recebe o ID do usuário pelo Auth type: Bearer token
 
+### OBS: Nas requisições que necessitam do ID do professor ou do aluno não é necessario passa-lo no arquivo JSON, ele já é obtido pelo  _Auth type: Bearer token_
 
 
 # Opções de cada usuário
-__OBS:__ Nas requisições que necessitam do ID do professor ou do aluno não é necessario passa-lo no arquivo JSON, ele já é obtido pelo  __Auth type: Bearer token__
+
 
 ## Opções do Professor
 
