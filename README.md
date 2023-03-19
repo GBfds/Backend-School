@@ -50,7 +50,7 @@
 	"nome": "gabriel professor",
 	"telefone": "92954013", 
 	"email": "prof@gmail.cm",
-	"cpf": "05875840332"
+	"cpf": "00011122234"
 }
 ```
 
@@ -60,7 +60,7 @@
 - Login do usuario
 ```
 {
-	"cpf": "05875840332"
+	"cpf": "11122233345"
 }
 ```
 
