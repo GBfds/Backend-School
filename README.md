@@ -18,7 +18,7 @@
       - O sistema deve ser capaz de lidar com requisições com formato de dados do tipo JSON. ✅
       - O sistema deve ser capaz de cadastrar professores, alunos e cadeiras(matérias). ✅
       - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional. ✅
-   - Adicionar arquivo de rotas do Insomnia
+   - Adicionar arquivo de rotas do Insomnia ✅
    - Adicionar migrations ✅
    - Adicionar o diagrama do banco de dados
 
