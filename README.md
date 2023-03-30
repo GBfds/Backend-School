@@ -20,7 +20,7 @@
       - O sistema deve ser capaz de persistir essas informações em um banco de dados relacional. ✅
    - Adicionar arquivo de rotas do Insomnia ✅
    - Adicionar migrations ✅
-   - Adicionar o diagrama do banco de dados
+   - Adicionar o diagrama do banco de dados ✅
 
 - __Intermediário__
    - Requisitoas
