@@ -19,10 +19,9 @@ class ConfirmarMatriculaService{
             throw new Error("id invalido");
         }
 
-        const confirm = true
         const confirmacao = await prismaClient.cadeira_pendente.update({
             data: {
-                confirmacao_prof: confirm
+                confirmacao_prof: true
             }, where: {
                 id: id_pendencia
             }

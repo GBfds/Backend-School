@@ -11,6 +11,17 @@ interface ReqCadeiras{
 
 class CreateCadeiraService{
     async execute({nome, slug, dt_inicio, dt_fim, carga_horaria, id_professor}:ReqCadeiras){
+        const checkCad = await prismaClient.cadeira.findFirst({
+            where:{
+                nome: nome,
+                id_professor: id_professor
+            }
+        })
+
+        if (checkCad){
+            throw new Error("Esse professor já possui uma cadeira com esse nome");
+        }
+
         const newCadeira = await prismaClient.cadeira.create({
             data:{
                 nome: nome,

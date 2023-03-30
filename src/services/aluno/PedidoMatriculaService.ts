@@ -17,6 +17,16 @@ type CadeiraResponse ={
 
 class PedidoMatriculaService{
     async execute({id_aluno, id_cadeira}:PedidoMatriculaRequest){
+        const checkmatr = await prismaClient.cadeira_pendente.findFirst({
+            where:{
+                id_aluno: id_aluno,
+                id_cadeira: id_cadeira
+            }
+        })
+
+        if (checkmatr){
+            throw new Error("Pedido de matricula já existente");
+        }
 
         const verify = await verifyTempo(id_cadeira)
         if (!verify){

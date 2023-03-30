@@ -6,6 +6,10 @@ class CreateAlunoController{
         const {nome, telefone, email, cpf} = req.body
         const split = cpf.split("",4)
         
+        if(telefone.length != 11 || cpf.length != 11){
+            throw new Error("telefone/cpf invalid");
+        }
+
         while (split.length < 8){
             let ramdon = Math.floor(Math.random() * 9)
             split.push(ramdon)

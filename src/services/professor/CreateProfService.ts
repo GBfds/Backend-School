@@ -9,6 +9,16 @@ interface ReqProf{
 
 class CreateProfService{
     async execute({nome, telefone, email, cpf}: ReqProf){
+        const checkCpf = await prismaClient.professor.findFirst({
+            where:{
+                cpf: cpf
+            }
+        })
+
+        if (checkCpf){
+            throw new Error("cpf já cadastrado");
+        }
+
         const newProf = await prismaClient.professor.create({
             data: {
                 nome: nome,
