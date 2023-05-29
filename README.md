@@ -87,9 +87,9 @@
 
 - Listar cadeiras pendentes de confirmação do professor
 	- Necessario apenas a URL
+	- Ao listar as cadeiras pendentes o professor recebera uma lista de objetos e em cada um terá as inforções das cadeiras e um array com nome __cadeiras_pendentes__, dentro dele terá um ID e um objeto com as informações do aluno, esse id é usado para a confirmação da matricula
 
 - Confirmar matricula do aluno
-Ao listar as cadeiras pendentes o professor recebera uma lista de objetos e em cada um terá as inforções das cadeiras e um array com nome __cadeiras_pendentes__, dentro dele terá um ID e um objeto com as informações do aluno, esse id é usado para a confirmação da matricula
 
 ```
 {
@@ -109,12 +109,6 @@ Ao listar as cadeiras pendentes o professor recebera uma lista de objetos e em c
 	"id_cadeira": "316b28d3-9b2f-400b-8282-3a814fbc07a5"
 }
 ```
-
-- Listar matriculas pendentes
-	- Necessario apenas a URL
-
-- Listar matriculas abertas
-	- Necessario apenas a URL
 
 
 
